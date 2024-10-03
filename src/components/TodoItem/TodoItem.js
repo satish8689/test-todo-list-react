@@ -17,6 +17,13 @@ const TodoItem = ({ todo, toggleTodo, deleteTodo, updateTodo }) => {
     setIsEditing(false);
   };
 
+  const handleDeleteClick = () => {
+    const confirmDelete = window.confirm('Are you sure you want to delete this task?');
+    if (confirmDelete) {
+      deleteTodo(todo.id);
+    }
+  };
+
   return (
     <tr className={`todo-item`}>
       <td>
@@ -58,7 +65,7 @@ const TodoItem = ({ todo, toggleTodo, deleteTodo, updateTodo }) => {
             />
             <FontAwesomeIcon 
               icon={faTrash} 
-              onClick={() => deleteTodo(todo.id)} 
+              onClick={handleDeleteClick} 
               className="icon delete-icon" 
               title="Delete" 
             />

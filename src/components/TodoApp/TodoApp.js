@@ -18,8 +18,10 @@ const TodoApp = () => {
     fetchTodos();
   }, []);
 
-  const addTodo = async (todoText) => {
-    const newTodo = await addTodoToApi(todoText, false);
+  const addTodo = async (todoText, status) => {
+    let statusUpdate = status == 'completed'?true:false
+    const newTodo = await addTodoToApi(todoText, statusUpdate);
+    newTodo.id = newTodo.id + todos.length; 
     setTodos((prevTodos) => [...prevTodos, newTodo]);
   };
 
@@ -33,7 +35,7 @@ const TodoApp = () => {
   };
 
   const deleteTodo = async (id) => {
-    await deleteTodoFromApi(id);
+    // await deleteTodoFromApi(id);
     setTodos((prevTodos) => prevTodos.filter((todo) => todo.id !== id));
   };
 
