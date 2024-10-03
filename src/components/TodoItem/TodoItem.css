@@ -1,0 +1,18 @@
+.icon {
+    cursor: pointer;
+    margin: 0 5px;
+    font-size: 1.2em;
+    transition: color 0.3s;
+  }
+  
+  .icon:hover {
+    color: #007bff; /* Change color on hover */
+  }
+  
+  .edit-icon {
+    color: #28a745; /* Green color for edit icon */
+  }
+  
+  .delete-icon {
+    color: #dc3545; /* Red color for delete icon */
+  }

@@ -1,0 +1,25 @@
+.todo-list {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .todo-list th,
+  .todo-list td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .todo-list th {
+    background-color: #f2f2f2;
+  }
+  
+  .todo-item.completed td {
+    text-decoration: line-through;
+    background-color: #e0ffe0;
+  }
+  
+  .edit-input,
+  .edit-status {
+    width: 100%;
+  }
